@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -21,7 +21,6 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
 #endif //_WIN32
 
-#ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -44,18 +43,15 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "Comments", "See http://research.m1stereo.tv/Mpng\0"
-            VALUE "CompanyName", "M1\0"
-            VALUE "FileDescription", "Motion PNG codec\0"
-            VALUE "FileVersion", "1.0.0\0"
-            VALUE "InternalName", "MotionPNG\0"
-            VALUE "LegalCopyright", "Copyright © 2009 by Maksym Veremeyenko\0"
-            VALUE "LegalTrademarks", "\0"
-            VALUE "OriginalFilename", "mpng.dll\0"
-            VALUE "PrivateBuild", "\0"
-            VALUE "ProductName", "MotionPNG\0"
-            VALUE "ProductVersion", "1.0.0\0"
-            VALUE "SpecialBuild", "\0"
+            VALUE "Comments", "See http://research.m1stereo.tv/Mpng"
+            VALUE "CompanyName", "M1"
+            VALUE "FileDescription", "Motion PNG codec"
+            VALUE "FileVersion", "1.0.0"
+            VALUE "InternalName", "MotionPNG"
+            VALUE "LegalCopyright", "Copyright © 2009 by Maksym Veremeyenko"
+            VALUE "OriginalFilename", "mpng.dll"
+            VALUE "ProductName", "MotionPNG"
+            VALUE "ProductVersion", "1.0.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -64,8 +60,6 @@ BEGIN
     END
 END
 
-#endif    // !_MAC
-
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -73,18 +67,18 @@ END
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE DISCARDABLE 
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE DISCARDABLE 
+2 TEXTINCLUDE 
 BEGIN
     "#include ""winres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE DISCARDABLE 
+3 TEXTINCLUDE 
 BEGIN
     "\r\n"
     "\0"
@@ -98,30 +92,27 @@ END
 // Dialog
 //
 
-IDD_ABOUT DIALOG DISCARDABLE  0, 0, 167, 92
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Motion PNG v1.0"
-FONT 8, "MS Sans Serif"
+IDD_ABOUT DIALOGEX 0, 0, 167, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "S3TC family VFW codec"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,131,54,29,14
-    CTEXT           "Motion PNG v1.0",IDC_STATIC,7,7,153,14,SS_NOPREFIX
+    CTEXT           "S3TC codec (DXT5)",IDC_STATIC,7,7,153,14,SS_NOPREFIX
     PUSHBUTTON      "Email author",IDC_EMAIL,7,54,50,14
     PUSHBUTTON      "Visit home page",IDC_HOMEPAGE,59,54,58,14
-    RTEXT           "libpng version:",IDC_STATIC,7,20,67,10,SS_NOPREFIX
-    RTEXT           "zlib version:",IDC_STATIC,7,32,67,10,SS_NOPREFIX
-    LTEXT           "<not set>",IDC_STATIC_VER1,93,21,67,10,SS_NOPREFIX
-    LTEXT           "<not set>",IDC_STATIC_VER2,93,31,67,10,SS_NOPREFIX
-    LTEXT           "Copyright 2009 Maksym Veremeyenko",IDC_STATIC,7,74,153,
-                    11,SS_NOPREFIX
+    RTEXT           "this encode:",IDC_STATIC,7,20,67,10,SS_NOPREFIX
+    LTEXT           "Copyright 2011 Maksym Veremeyenko",IDC_STATIC,7,74,153,11,SS_NOPREFIX
+    LTEXT           "Static",IDC_STATIC_S3TC,93,21,67,8
 END
 
-IDD_CONFIGURE DIALOG DISCARDABLE  0, 0, 245, 54
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_CONFIGURE DIALOG  0, 0, 245, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Motion PNG configuration dialog"
 FONT 8, "MS Sans Serif"
 BEGIN
-    CONTROL         "Enable console-window logging (useful for debugging)",
-                    IDC_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,191,10
+    CONTROL         "Enable console-window logging (useful for debugging)",IDC_LOG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,191,10
     PUSHBUTTON      "Email author",IDC_EMAIL,7,33,50,14
     PUSHBUTTON      "Visit home page",IDC_HOMEPAGE,59,33,58,14
     DEFPUSHBUTTON   "OK",IDOK,135,33,50,14
@@ -135,7 +126,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO DISCARDABLE 
+GUIDELINES DESIGNINFO 
 BEGIN
     IDD_ABOUT, DIALOG
     BEGIN

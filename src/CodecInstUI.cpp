@@ -4,8 +4,6 @@
 #pragma comment(lib, "User32.Lib")
 #pragma comment(lib, "Shell32.Lib")
 
-#include <png.h>
-
 BOOL CodecInst::QueryAbout() { return TRUE; }
 
 static INT_PTR CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -19,7 +17,7 @@ static INT_PTR CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, 
             break;
 
             case IDC_HOMEPAGE:
-                ShellExecute(NULL, NULL, "http://research.m1stereo.tv/wiki/index.php/Mpng", NULL, NULL, SW_SHOW);
+                ShellExecute(NULL, NULL, "http://research.m1stereo.tv/wiki/index.php/S3tc", NULL, NULL, SW_SHOW);
                 break;
 
             case IDC_EMAIL:
@@ -29,15 +27,16 @@ static INT_PTR CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, 
     }
     else if (uMsg == WM_INITDIALOG)
     {
-        SetWindowText(GetDlgItem(hwndDlg, IDC_STATIC_VER1), PNG_LIBPNG_VER_STRING);
-        SetWindowText(GetDlgItem(hwndDlg, IDC_STATIC_VER2), ZLIB_VERSION);
+#ifdef DXT5
+        SetWindowText(GetDlgItem(hwndDlg, IDC_STATIC_S3TC), "DXT5");
+#endif
     };
     return FALSE;
 };
 
 DWORD CodecInst::About(HWND hwnd)
 {
-    DialogBox(hmoduleMPNG, MAKEINTRESOURCE(IDD_ABOUT), hwnd, AboutDialogProc);
+    DialogBox(hmoduleS3TC, MAKEINTRESOURCE(IDD_ABOUT), hwnd, AboutDialogProc);
     return ICERR_OK;
 }
 
@@ -46,7 +45,7 @@ static INT_PTR CALLBACK ConfigureDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wPar
     if (uMsg == WM_INITDIALOG)
     {
         CheckDlgButton(hwndDlg, IDC_LOG,
-            GetPrivateProfileInt("debug", "log", 0, "mpng.ini") ? BST_CHECKED : BST_UNCHECKED);
+            GetPrivateProfileInt("debug", "log", 0, "s3tc.ini") ? BST_CHECKED : BST_UNCHECKED);
     }
     else if (uMsg == WM_COMMAND)
     {
@@ -54,7 +53,7 @@ static INT_PTR CALLBACK ConfigureDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wPar
         {
             case IDOK:
                 WritePrivateProfileString("debug", "log",
-                    (IsDlgButtonChecked(hwndDlg, IDC_LOG) == BST_CHECKED) ? "1" : "0", "mpng.ini");
+                    (IsDlgButtonChecked(hwndDlg, IDC_LOG) == BST_CHECKED) ? "1" : "0", "s3tc.ini");
 
             case IDCANCEL:
                 EndDialog(hwndDlg, 0);
@@ -71,6 +70,6 @@ BOOL CodecInst::QueryConfigure() { return TRUE; }
 
 DWORD CodecInst::Configure(HWND hwnd)
 {
-    DialogBox(hmoduleMPNG, MAKEINTRESOURCE(IDD_CONFIGURE), hwnd, ConfigureDialogProc);
+    DialogBox(hmoduleS3TC, MAKEINTRESOURCE(IDD_CONFIGURE), hwnd, ConfigureDialogProc);
     return ICERR_OK;
 }

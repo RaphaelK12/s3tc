@@ -1,0 +1,4 @@
+LIBRARY         DXT5
+
+EXPORTS
+	DriverProc

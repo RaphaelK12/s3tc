@@ -2,9 +2,11 @@
 #include <vfw.h>
 //#pragma hdrstop
 
-static const DWORD FOURCC_MPNG = mmioFOURCC('M','P','N','G');   // our compressed format
+#ifdef DXT5
+static const DWORD FOURCC_S3TC = mmioFOURCC('D','X','T','5');   // our compressed format
+#endif
 
-extern HMODULE hmoduleMPNG;
+extern HMODULE hmoduleS3TC;
 
 #define ALIGN4(V) (((V + 3) >> 2) << 2)
 

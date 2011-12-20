@@ -176,10 +176,10 @@ LRESULT PASCAL DriverProc
 };
 
 
-HMODULE hmoduleMPNG=0;
+HMODULE hmoduleS3TC=0;
 
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD, LPVOID)
 {
-    hmoduleMPNG = (HMODULE) hinstDLL;
+    hmoduleS3TC = (HMODULE) hinstDLL;
     return TRUE;
 };

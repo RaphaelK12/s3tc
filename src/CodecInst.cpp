@@ -1,8 +1,10 @@
 #include "CodecInst.h"
 
-static TCHAR codec_description[]    = TEXT("Motion PNG v1.0");
-static TCHAR codec_name[]           = TEXT("Motion PNG");
+#ifdef DXT5
+static TCHAR codec_description[]    = TEXT("DXT5");
+static TCHAR codec_name[]           = TEXT("DXT5");
 #define CODEC_VERSION               0x00010002              // 1.0
+#endif
 
 CodecInst* Open(ICOPEN* icinfo)
 {
@@ -33,7 +35,7 @@ DWORD CodecInst::GetInfo(ICINFO* icinfo, DWORD dwSize)
 
     icinfo->dwSize              = sizeof(ICINFO);
     icinfo->fccType             = ICTYPE_VIDEO;
-    icinfo->fccHandler          = FOURCC_MPNG;
+    icinfo->fccHandler          = FOURCC_S3TC;
     icinfo->dwFlags             = 0;
 
     icinfo->dwVersion           = CODEC_VERSION;
@@ -54,7 +56,7 @@ DWORD CodecInst::SetState(LPVOID pv, DWORD dwSize) { return 0; };
 void CodecInst::log_message(const char fmt[], ...)
 {
 #ifndef _DEBUG
-    static int debug = GetPrivateProfileInt("debug", "log", 0, "mpng.ini");
+    static int debug = GetPrivateProfileInt("debug", "log", 0, "s3tc.ini");
     if (!debug) return;
 #endif /* _DEBUG */
 
