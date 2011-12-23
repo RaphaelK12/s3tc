@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dxt5", "dxt5.vcproj", "{06CFC752-B27D-493A-B4EF-DFA45E4E3312}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dxt3", "dxt3.vcproj", "{06CFC752-B27D-493A-B4EF-DFA45E4E3313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,14 @@ Global
 		{06CFC752-B27D-493A-B4EF-DFA45E4E3312}.Release|Win32.Build.0 = Release|Win32
 		{06CFC752-B27D-493A-B4EF-DFA45E4E3312}.Release|x64.ActiveCfg = Release|x64
 		{06CFC752-B27D-493A-B4EF-DFA45E4E3312}.Release|x64.Build.0 = Release|x64
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Debug|Win32.ActiveCfg = Debug|Win32
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Debug|Win32.Build.0 = Debug|Win32
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Debug|x64.ActiveCfg = Debug|x64
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Debug|x64.Build.0 = Debug|x64
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Release|Win32.ActiveCfg = Release|Win32
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Release|Win32.Build.0 = Release|Win32
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Release|x64.ActiveCfg = Release|x64
+		{06CFC752-B27D-493A-B4EF-DFA45E4E3313}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

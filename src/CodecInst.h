@@ -6,6 +6,10 @@
 static const DWORD FOURCC_S3TC = mmioFOURCC('D','X','T','5');   // our compressed format
 #endif
 
+#ifdef DXT3
+static const DWORD FOURCC_S3TC = mmioFOURCC('D','X','T','3');   // our compressed format
+#endif
+
 extern HMODULE hmoduleS3TC;
 
 #define ALIGN4(V) (((V + 3) >> 2) << 2)

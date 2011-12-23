@@ -6,6 +6,12 @@ static TCHAR codec_name[]           = TEXT("DXT5");
 #define CODEC_VERSION               0x00010002              // 1.0
 #endif
 
+#ifdef DXT3
+static TCHAR codec_description[]    = TEXT("DXT3");
+static TCHAR codec_name[]           = TEXT("DXT3");
+#define CODEC_VERSION               0x00010002              // 1.0
+#endif
+
 CodecInst* Open(ICOPEN* icinfo)
 {
     if (icinfo && ICTYPE_VIDEO != icinfo->fccType)
