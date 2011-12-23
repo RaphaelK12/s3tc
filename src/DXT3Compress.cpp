@@ -56,7 +56,10 @@ DWORD CodecInst::Compress(ICCOMPRESS* icinfo, DWORD dwSize)
             if(4 == pix_size)
             {
                 for(ALPHA = 0, b = 0, j = 0; j < 4; j++) for(i = 0; i < 4; i++, b++)
-                    ALPHA |= ((PIX(3) >> 4) & 0x0F) << (b * 3);
+                {
+                    unsigned long long v = (PIX(3) >> 4) & 0x0F;
+                    ALPHA |= v << (b * 4);
+                };
             }
             else
                 ALPHA = 0xFFFFFFFFFFFFFFFFLL;
