@@ -30,6 +30,7 @@ static INT_PTR CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, 
 #ifdef DXT5
         SetWindowText(GetDlgItem(hwndDlg, IDC_STATIC_S3TC), "DXT5");
 #endif
+        SetWindowText(GetDlgItem(hwndDlg, IDC_STATIC_DATETIME), __DATE__ " " __TIME__);
     };
     return FALSE;
 };

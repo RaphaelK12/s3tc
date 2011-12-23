@@ -104,6 +104,7 @@ BEGIN
     RTEXT           "this encode:",IDC_STATIC,7,20,67,10,SS_NOPREFIX
     LTEXT           "Copyright 2011 Maksym Veremeyenko",IDC_STATIC,7,74,153,11,SS_NOPREFIX
     LTEXT           "Static",IDC_STATIC_S3TC,93,21,67,8
+    CTEXT           "this encode:",IDC_STATIC_DATETIME,7,32,153,10,SS_NOPREFIX
 END
 
 IDD_CONFIGURE DIALOGEX 0, 0, 245, 54

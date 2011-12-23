@@ -12,6 +12,7 @@
 #define IDC_STATIC_VER1                 1006
 #define IDC_STATIC_VER2                 1007
 #define IDC_STATIC_S3TC                 1007
+#define IDC_STATIC_DATETIME             1008
 
 // Next default values for new objects
 // 
@@ -20,7 +21,7 @@
 #define _APS_NO_MFC                     1
 #define _APS_NEXT_RESOURCE_VALUE        103
 #define _APS_NEXT_COMMAND_VALUE         40001
-#define _APS_NEXT_CONTROL_VALUE         1008
+#define _APS_NEXT_CONTROL_VALUE         1009
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
