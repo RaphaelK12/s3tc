@@ -107,7 +107,7 @@ DWORD CodecInst::Compress(ICCOMPRESS* icinfo, DWORD dwSize)
                             };
                         };
                     };
-                    ALPHA |= l << (b * 3);
+                    ALPHA |= v << (b * 3);
                 };
 
                 /* save alpha components */
